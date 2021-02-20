@@ -21,6 +21,21 @@ To use this project locally you must have [python](https://www.python.org/downlo
     ```
 4. **Export the EIA API key to the environment**
 
+5. **Running the script**
+    Before running the script, ensure the API key has been generated.
+
+    By default, the script will get the daily data and write it to the [daily prices CSV file](natural_gas_prices/data/daily_prices.csv). To use the script for other interval types, go to the script and edit the line:
+    ```py
+    # Run the function to populate CSV
+    populate_csv_file( duration_type="daily" )
+    ```
+    Change the `daily` to either `weekly`, `monthly` or `annually`.
+
+    In the project root directory, run:
+    ```sh
+    python natural_gas_prices/scripts/get_ng_prices
+    ```
+
 ### EIA API key 🔑
 The API call is made to `https://api.eia.gov/series/?api_key=YOUR_API_KEY&series_id=NG.RNGWHHD.D` as **GET** request. Make sure to replace `YOUR_API_KEY` with your personalised actual EIA API key. If you don't have a key, register [here](https://www.eia.gov/opendata/register.php), fill in your email and a key would be sent to your email address in less than a minute.
 
