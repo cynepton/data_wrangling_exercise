@@ -1,0 +1,118 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "daily_prices",
+      "path": "https://github.com/cynepton/data_wrangling_exercise/blob/main/natural_gas_prices/data/daily_prices.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "format": "yyyymmdd",
+            "title": "Daily Date"
+          },
+          {
+            "name": "Price",
+            "type": "number",
+            "format": "default",
+            "title": "Price"
+          }
+        ]
+      },
+      "format": "csv",
+      "title": "daily_gas_prices",
+      "description": "Daily Henry Hub gas prices with 2 columns for Date and Price. Date is in the format 'yyyymmdd`."
+    },
+    {
+      "name": "weekly_prices",
+      "path": "https://github.com/cynepton/data_wrangling_exercise/blob/main/natural_gas_prices/data/weekly_prices.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "format": "yyyymmdd",
+            "title": "End of Week Date"
+          },
+          {
+            "name": "Price",
+            "type": "number",
+            "format": "default",
+            "title": "Price"
+          }
+        ]
+      },
+      "description": "Weekly Henry Hub gas prices with 2 columns for Date and Price. Date is in the format 'yyyymmdd`. The date corresponds to the friday indicating close of business for that week.",
+      "format": "csv"
+    },
+    {
+      "name": "monthly_prices",
+      "path": "https://github.com/cynepton/data_wrangling_exercise/blob/main/natural_gas_prices/data/monthly_prices.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "format": "yyyymm",
+            "title": "Month Date"
+          },
+          {
+            "name": "Price",
+            "type": "number",
+            "format": "default",
+            "title": "Price"
+          }
+        ]
+      },
+      "title": "monthly_gas_prices",
+      "format": "csv",
+      "description": "Monthly Henry Hub gas prices with 2 columns for Date and Price. Date is in the format 'yyyymm`."
+    },
+    {
+      "name": "annual_prices",
+      "path": "https://github.com/cynepton/data_wrangling_exercise/blob/main/natural_gas_prices/data/annually_prices.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "format": "yyyy",
+            "title": "year"
+          },
+          {
+            "name": "Price",
+            "type": "number",
+            "format": "default",
+            "title": "price",
+            "description": "Price in $ per million Btu"
+          }
+        ]
+      },
+      "title": "annual_prices",
+      "format": "csv",
+      "description": "Annual Henry Hub gas prices with 2 columns for Date and Price. Date is in the format 'yyyy`."
+    }
+  ],
+  "name": "henry_hub_natural_gas_prices",
+  "title": "Henry Hub Natural Gas Prices",
+  "description": "A collection of natural gas prices in daily, weekly, monthly and annually intervals.",
+  "homepage": "https://github.com/cynepton/data_wrangling_exercise/tree/main/natural_gas_prices",
+  "version": "1.0.0",
+  "contributors": [
+    {
+      "title": "Isaac Aderonmu",
+      "role": "author"
+    }
+  ],
+  "licenses": [
+    {
+      "title": "MIT",
+      "path": "https://github.com/cynepton/data_wrangling_exercise/blob/main/LICENSE"
+    }
+  ]
+}
